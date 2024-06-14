@@ -1,0 +1,191 @@
+/* Reset des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1E1E1E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    background-color: #5A189A;
+    padding: 40px 20px;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #5A189A;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
+
+.main-title h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: fadeIn 2s;
+}
+
+.main-title p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.journey, .project-progress, .experience, .obits {
+    padding: 40px 20px;
+    background-color: #3A0CA3;
+    margin: 20px 0;
+    border-radius: 15px;
+    animation: slideIn 2s;
+}
+
+.cards, .exp-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card, .exp-card {
+    background-color: #9D4EDD;
+    padding: 20px;
+    border-radius: 15px;
+    width: 30%;
+    margin: 10px;
+    animation: zoomIn 1s;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover, .exp-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img, .exp-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card p, .exp-card h4, .exp-card p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.project-progress img {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.plan, .premium {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #6A1B9A;
+    border-radius: 15px;
+}
+
+.plan h3, .premium h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.plan p, .premium p {
+    font-size: 1.1em;
+}
+
+footer {
+    background-color: #240046;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+footer h2 {
+    font-size: 1.5em;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
